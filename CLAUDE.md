@@ -10,6 +10,7 @@ This is a **requirements/specification repository** for a TypeScript/Bun-based V
 - Host-level services (Mox email server)
 - Automated certificate sync between Caddy and Mox
 - SOPS/age encrypted secrets
+- DNS record management via Netcup API
 
 **Current state**: Requirements documentation only - implementation not yet started.
 
@@ -21,6 +22,7 @@ This is a **requirements/specification repository** for a TypeScript/Bun-based V
 | Secrets | SOPS + age | Encrypted in git, no external dependencies |
 | Config | YAML with profiles | Human-readable, multi-VPS support |
 | Container | Docker Compose | Mature ecosystem |
+| VPS Provider | Netcup ARM G11 | Cost-effective, ARM support, DNS Records API |
 
 ## Architecture
 
@@ -91,5 +93,5 @@ Key libraries:
 ## Target Environment
 
 - Ubuntu 22.04 LTS or later
-- Netcup ARM G11 VPS (16GB RAM, 10 cores, 512GB SSD)
+- Netcup ARM G11 VPS (32GB RAM, 14 cores, 1024GB NVMe)
 - Docker with Compose plugin
